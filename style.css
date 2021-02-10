@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* {box-sizing: border-box} will include padding and border when setting the width or height */
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    /* Will remove preset 'underline' or 'decoration' on any text */
+    color:  rgb(99, 95, 95);
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.main {
+    position: relative;
+    /* going to be moving things inside the div, so setting parent element (div) to position:relative, we can set position:absolute for inside elements so they move in relation to parent element */
+
+    height: 100vh;
+    /* vh determines the height of the element by setting it to a percentage of the viewport. VW is used for width. VH is used for height */
+
+    display: flex; 
+    /* turn main div into flexbox container */
+
+    flex-direction:column;
+    /* flex-direction:row is default */
+
+    align-items: center;
+    /* align-items to center horizontally */
+
+    justify-content: center;
+    /* center items vertically */
+
+    padding: 0 20px; 
+    /* So text does not go right up to the edge on smaller screen size, set left/right padding*/
+}
+
+.video-container {
+    position:absolute; 
+    /* will position relative to parent element */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* height/width set to take up 100% of viewport */
+    background-image: url("cover.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
